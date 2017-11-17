@@ -1,0 +1,13 @@
+# Count the Letter Frequency
+# Searched for most common 3 letter word ("EAQ"), which has to be "THE" (most common word in english), so 
+# Wrote down all 2 letter words (NI, SR, LR, SF, LO, ES, MO, CQ, ST, NQ)
+# Count those words and look up the most common 2 letter words (be, to, of, in, it, on, he)
+# O has to be "S" , because e.g. PSSZ’O has a single apostrophe.
+# Because O is "S", the word "LO" has to mean "IS", -> L -> "I"
+# M is the most common single letter word in the text. -> has to be "A"
+# ST, SR, ST start with the same letter. most common 2 letter word with the same first letter are "IN", "IT", "IF" ,  or "OF", "ON", "OR"
+# asPeYt -> aspect | Y -> c, P -> p
+# esPeciaZZL -> Z -> l, L -> y
+# QelatiOnal -> Relational , Q -> R , O -> o
+# KataNases -> Databases, K -> d, N -> b
+# at this point, the text makes sense and i just swapped the other letters. (e.g. desiWn -> design)

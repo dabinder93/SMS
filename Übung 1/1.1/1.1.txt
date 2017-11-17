@@ -1,0 +1,17 @@
+TQZMELSRMZ KMEMNMOQO, NI KQOLWR, FSYJO SR PTQGQRELRW TQKJRKMRYI CLEALR EAQ KMEM PSSZ. EALO MOPQYE NQYSDQO QOPQYLMZZI LDPSTEMRE LR EQTDO SF CMEQTDMTBLRW, 
+OLRYQ TQKJRKMRYI LO SRQ SF EAQ DMLR PTQTQHJLOLEQO LR STKQT ES QDNQK MKKLELSRMZ LRFSTDMELSR CALYA LDPZLYMEQO M RSEMNZQ LRYTQMOQ LR EAQ KMEM PSSZ’O QRETSPLY 
+PTSPQTELQO. JELZLVLRW M ALWAZI QRETSPLY YMTTLQT DQKLJD EAQTQFSTQ KTMDMELYMZZI DLRLDLVQO EAQ PSEQRELMZ PSOOLNLZLELQO SF ALKLRW MKKLELSRMZ LRFSTDMELSR CLEASJE 
+OQTLSJOZI LREQTFQTLRW CLEA EAQ OETJYEJTMZ, HJMRELEMELGQ MRK/ST HJMZLEMELGQ YSROLOEQRYI EAQTQSF. MO M TQOJZE, QDNQKKLRW MKKLELSRMZ LRFSTDMELSR LR M ZSC TQKJRKMRYI 
+YMTTLQT OLWRMZ JOLRW ETMKLELSRMZ OEQWMRSWTMPALY EQYARLHJQO QLEAQT LRYTQMOQO EAQ OLVQ SF EAQ STLWLRMZ LRFSTDMELSR (OLRYQ TQKJRKMRE LRFSTDMELSR CQ YSJZK DMBQ JOQ SF 
+FST EALO PJTPSOQ LO TMTQ), ST DMI AQMGLZI KLOESTE EAQ OMDQ KJQ ES LRKLOPQROMNZQ YAMRWQO CALYA AMGQ ES NQ DMKQ.
+
+
+
+Solution:
+
+relational databases, by design, focus on preventing redundancy within the data pool. this aspect becomes especially important in terms of watermarking, 
+since redundancy is one of the main prerequisites in order to embed additional information which implicates a notable increase in the data pool’s entropic 
+properties. utilizing a highly entropic carrier medium therefore dramatically minimizes the potential possibilities of hiding additional information without 
+seriously interfering with the structural, quantitative and/or qualitative consistency thereof. as a result, embedding additional information in a low redundancy 
+carrier signal using traditional steganographic techniques either increases the size of the original information (since redundant information we could make use of 
+for this purpose is rare), or may heavily distort the same due to indispensable changes which have to be made.
