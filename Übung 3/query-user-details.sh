@@ -2,19 +2,16 @@
 
 if [ -z $1 ]
   then
-    echo "Error, invalid paremeter, must contain uid or username"
+    echo "Parameter must contain uid or username"
     exit 1
 fi
 
-#check if user exists
 if [ -z "$(getent passwd $1)" ]
   then
-    echo "user does NOT exist."
+    echo "no such user"
     exit 1
 fi
  
-#Get the user info with getent from passwd
-
 echo -e "Username: \t $(getent passwd $1 | cut -d: -f1 | sort -r)"
 
 echo -e "Password: \t $(getent passwd $1 | cut -d: -f2 | sort -r)"
@@ -25,11 +22,11 @@ echo -e "GID: \t\t $(getent  passwd $1 | cut -d: -f4 | sort -r)"
  
 echo -e "User ID Info: \t $(getent passwd $1 | cut -d: -f5 | sort -r)"
  
-echo -e "Home dir: \t $(getent passwd $1 | cut -d: -f6 | sort -r)"
+echo -e "Home directory: \t $(getent passwd $1 | cut -d: -f6 | sort -r)"
  
 echo -e "Shell: \t\t $(getent passwd $1 | cut -d: -f7 | sort -r)"
- 
-# Check the password
+
+
 userPass=$(sudo cat /etc/shadow | grep $1 | cut -d ':' -f2)
  
 if [[ $userPass == "*" ]] || [[ $userPass == "!" ]]; then
@@ -40,11 +37,10 @@ else
     echo -e "Password: \t is set"
 fi
  
-#Home directory
 
 homeDir=$(getent passwd $1 | cut -d: -f6 | sort -r)
 if ! [ -z "$homeDir" ]; then
-    echo "Home dir: \t $homeDir"
+    echo "Home directory: \t $homeDir"
  
     filecount=$(find $homeDir -type f 2>/dev/null | wc -l)
     echo -e "Files: \t\t $filecount"

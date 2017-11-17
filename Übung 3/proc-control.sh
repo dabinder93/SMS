@@ -10,16 +10,16 @@ re='^[0-9]+$'
 }
 
 if [ -z "$1" ]; then
-   echo >&2 "Error, a process name or pid as parameter1 is mandatory."
+   echo >&2 "Parameter 1 has to be a name or the pid"
    exit;
 fi
 
 if [ -z "$2" ]; then
-   echo >&2 "Error, A time value as parameter2 as integer is mandatory."
+   echo >&2 "Second Parameter has to be an integer Time value"
    exit
 else 
    if ! isNumber $2; then 
-      echo >&2 "Parameter2 must be a integer"
+      echo >&2 "Second Parameter must be an integer"
       exit
    fi
 fi
@@ -30,7 +30,7 @@ if [ ! -z "$3" -a "$3" = "-auto" ]; then
    isParam3Set=true 
 else 
    if [ "$3" != "" ]; then 
-      echo >&2 "Paremeter 3 can only be -auto or unused"
+      echo >&2 "Third paremeter 3 can only be -auto or unused"
       exit
    fi
 fi
@@ -46,7 +46,7 @@ if ! isNumber $1; then
       pid=( $(pgrep $1))
 
       if [ "${#pid[@]}" -gt "1" ]; then
-	echo "There is more than one pid with the same name found, please select one:"
+	echo "There are more pid with the same name. Choose one:"
 	echo
 	echo "PID"
 	for (( i=0; i<${#pid[@]}; i++ )); do 
@@ -54,7 +54,6 @@ if ! isNumber $1; then
 	done
 	echo
          
-	# User has to select one PID
          selec=nothig 
          invalid=true 
          while $invalid; do
@@ -92,7 +91,6 @@ echo "Selected PID:	"$pid
 cmd=$(ps -o args $pid |grep -v COMMAND)
 echo $cmd
 
-# Check every $sec seconds
 
 checkingProcess=true;
 while $checkingProcess; do 
@@ -100,14 +98,14 @@ while $checkingProcess; do
 	sleep $sec
 
 	if ps -p $pid >/dev/null; then
-   		echo >&1 "Process status: OK"; 
+   		echo >&1 "Status: OK"; 
 	else
-   		echo >&2 "Processs status: closed"; 
+   		echo >&2 "Status: CLOSED"; 
    		if $isParam3Set; then # Auto restart
 	   		nohup $cmd & > /dev/null
 	   		pid=$!
 	   		if [[ $? != 0 ]]; then
-				>&2 echo "Error restarting the process."
+				>&2 echo "Restarting"
 	   		else
 				echo "Restaring the program, PID: "$pid
 	   		fi
@@ -141,4 +139,4 @@ while $checkingProcess; do
 	fi
 done
 
-echo "Finished!"
+echo "Done!"
