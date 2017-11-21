@@ -97,6 +97,18 @@ Dieses Beispiel wurde lokal getestet, da wird keine Verbindung von zwei verschie
 
 siehe bannerScript.sh + dessen output file "banner.txt"
 
+**Which webserver software is used most often, and on what sites? Which ones are used least often?**
+Most often: 4 x Apache on:
+- orf.at,
+- diepresse.com,
+- heise.de,
+- bild.de
+
+Least often:
+- **shield** on golem.de
+- **Gatling/0.16** on blog.fefe.de
+- **Microsoft-HTTPAPI/2.0** on derstandard.at
+
 
 ### 8.
 ```
