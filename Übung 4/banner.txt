@@ -1,0 +1,7 @@
+orf.at 	 Apache
+derstandard.at 	 Microsoft-HTTPAPI/2.0
+diepresse.com 	 Apache
+heise.de 	 Apache
+golem.de 	 shield
+blog.fefe.de 	 Gatling/0.16
+bild.de 	 Apache
